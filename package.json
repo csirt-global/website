@@ -1,4 +1,9 @@
 {
+  "private": true,
+  "scripts": {
+    "watch": "npx tailwindcss -i ./css/style.css -o ./dist/styles.css --watch",
+    "serve": "if ! command -v 'serve'\nthen\nnpm install --global serve\nfi && serve"
+  },
   "devDependencies": {
     "tailwindcss": "^3.1.8"
   },
