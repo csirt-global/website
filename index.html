@@ -1,57 +1,729 @@
 <!doctype html>
-
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>CSIRT.global</title>
-  <meta name="description" content="CSIRT.global">
-  <meta name="author" content="CSIRT.global">
-
-  <meta property="og:title" content="CSIRT.global">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://CSIRT.global">
-  <meta property="og:description" content="CSIRT.global">
-  <meta property="og:image" content="CSIRT.global-logo.png">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
-  <meta name="msapplication-TileColor" content="#2d89ef">
-  <meta name="theme-color" content="#ffffff">
-
-  <link rel="stylesheet" href="#">
-  <style>
-	body {
-  		background-color: #000;
-	     }
-	.img-container-block {
-	  text-align: center;
-	}
-	.img-container-inline {
-	  text-align: center;
-	  display: block;
-	  
-	}
-   </style>
-
-
-
-
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSIRT.Global</title>
+    <link href="dist/styles.css" rel="stylesheet">
+    <script src="//unpkg.com/alpinejs" defer></script>
 </head>
+<body class="antialiased font-sans" data-new-gr-c-s-check-loaded="14.1075.0" data-gr-ext-installed="">
 
-<body>
+<!-- Header (black) -->
+<div class="relative bg-gray-900 overflow-hidden"
+     x-data="{ open: false, focus: true }" @keydown.escape="open = false"
+>
+    <div class="hidden sm:block sm:absolute sm:inset-y-0 sm:h-full sm:w-full" aria-hidden="true">
+        <div class="relative h-full max-w-7xl mx-auto">
+            <svg class="absolute right-full transform translate-y-1/4 translate-x-1/4 lg:translate-x-1/2"
+                 width="404" height="784" fill="none" viewBox="0 0 404 784">
+                <defs>
+                    <pattern id="f210dbf6-a58d-4871-961e-36d5016a0f49" x="0" y="0" width="20" height="20"
+                             patternUnits="userSpaceOnUse">
+                        <rect x="0" y="0" width="4" height="4" class="text-yellow-500" fill="currentColor"></rect>
+                    </pattern>
+                </defs>
+                <rect width="404" height="784" fill="url(#f210dbf6-a58d-4871-961e-36d5016a0f49)"></rect>
+            </svg>
+            <svg class="absolute left-full transform -translate-y-3/4 -translate-x-1/4 md:-translate-y-1/2 lg:-translate-x-1/2"
+                 width="404" height="784" fill="none" viewBox="0 0 404 784">
+                <defs>
+                    <pattern id="5d0dd344-b041-4d26-bec4-8d33ea57ec9b" x="0" y="0" width="20" height="20"
+                             patternUnits="userSpaceOnUse">
+                        <rect x="0" y="0" width="4" height="4" class="text-yellow-500" fill="currentColor"></rect>
+                    </pattern>
+                </defs>
+                <rect width="404" height="784" fill="url(#5d0dd344-b041-4d26-bec4-8d33ea57ec9b)"></rect>
+            </svg>
+        </div>
+    </div>
 
-<br /><br /><br /><br /><br />
-<div class="img-container-block">
-  <img src="logo.png" alt="CSIRT.global">
+    <div class="relative pt-6 pb-16 sm:pb-24">
+        <div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6">
+                <!-- Desktop menu -->
+                <nav class="relative flex items-center justify-between sm:h-10 md:justify-center"
+                     aria-label="Global">
+                    <div class="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0">
+                        <div class="flex items-center justify-between w-full md:w-auto">
+                            <a href="#">
+                                <span class="sr-only">Workflow</span>
+                                <img class="h-8 w-auto sm:h-10"
+                                     src="images/csirt_global_logo.png"
+                                     alt="">
+                            </a>
+                            <div class="-mr-2 flex items-center md:hidden">
+                                <button type="button"
+                                        class="bg-yellow-700 rounded-md p-2 inline-flex items-center justify-center text-gray-900 hover:text-gray-700 hover:bg-yellow-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-yellow-500"
+                                        @click="open = true" @mousedown="if (open) $event.preventDefault()"
+                                        aria-expanded="false" :aria-expanded="open.toString()">
+                                    <span class="sr-only">Open main menu</span>
+                                    <svg class="h-6 w-6" x-description="Heroicon name: outline/menu"
+                                         xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                         stroke-width="2" stroke="currentColor" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                              d="M4 6h16M4 12h16M4 18h16"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden md:flex md:space-x-10">
+
+                        <a href="#mission" class="font-medium text-yellow-700 hover:text-yellow-900">Mission</a>
+
+                        <a href="#organisation" class="font-medium text-yellow-700 hover:text-yellow-900">Organisation</a>
+
+                        <a href="#team" class="font-medium text-yellow-700 hover:text-yellow-900">Team</a>
+
+                        <a href="#code" class="font-medium text-yellow-700 hover:text-yellow-900">Code of conduct</a>
+
+                        <a href="#help" class="font-medium text-yellow-700 hover:text-yellow-900">Help us</a>
+
+                    </div>
+                </nav>
+            </div>
+
+            <!-- Mobile menu -->
+            <div x-show="open" x-transition:enter="duration-150 ease-out"
+                 x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100"
+                 x-transition:leave="duration-100 ease-in" x-transition:leave-start="opacity-100 scale-100"
+                 x-transition:leave-end="opacity-0 scale-95"
+                 x-description="Mobile menu, show/hide based on menu open state."
+                 class="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
+                 @click.away="open = false">
+                <div class="rounded-lg shadow-md bg-gray-700 ring-1 ring-black ring-opacity-5 overflow-hidden">
+                    <div class="px-5 pt-4 flex items-center justify-between">
+                        <div>
+                            <img class="h-8 w-auto"
+                                 src="https://tailwindui.com/img/logos/workflow-mark.svg?color=yellow&amp;shade=600"
+                                 alt="">
+                        </div>
+                        <div class="-mr-2">
+                            <button type="button"
+                                    class="bg-yellow-500 rounded-md p-2 inline-flex items-center justify-center text-gray-700 hover:text-gray-500 hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-yellow-500"
+                                    @click="open = false">
+                                <span class="sr-only">Close menu</span>
+                                <svg class="h-6 w-6" x-description="Heroicon name: outline/x"
+                                     xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                     stroke-width="2" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                          d="M6 18L18 6M6 6l12 12"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="px-2 pt-2 pb-3">
+                        <a href="#"
+                           class="block px-3 py-2 rounded-md text-base font-medium text-yellow-700 hover:text-yellow-500 hover:bg-gray-500">Product</a>
+
+                        <a href="#"
+                           class="block px-3 py-2 rounded-md text-base font-medium text-yellow-700 hover:text-yellow-500 hover:bg-gray-500">Features</a>
+
+                        <a href="#"
+                           class="block px-3 py-2 rounded-md text-base font-medium text-yellow-700 hover:text-yellow-500 hover:bg-gray-500">Marketplace</a>
+
+                        <a href="#"
+                           class="block px-3 py-2 rounded-md text-base font-medium text-yellow-700 hover:text-yellow-500 hover:bg-gray-500">Company</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <main class="mt-16 mx-auto max-w-7xl px-4 sm:mt-24">
+            <div class="text-center">
+                <h1>
+                <figure>
+                    <img class="w-auto rounded-lg h-96 inline-flex"
+                         src="images/csirt_global_logo.png"
+                         alt="" object-fit="auto">
+                </figure>
+              </h1>
+            </div>
+        </main>
+    </div>
+</div>
+
+<!-- Content (Black) -->
+<div class="relative py-16 bg-gray-900 overflow-hidden">
+    <div class="hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full">
+        <div class="relative h-full text-lg max-w-prose mx-auto" aria-hidden="true">
+            <svg class="absolute top-12 left-full transform translate-x-32" width="404" height="384" fill="none"
+                 viewBox="0 0 404 384">
+                <defs>
+                    <pattern id="74b3fd99-0a6f-4271-bef2-e80eeafdf362" x="0" y="0" width="20" height="20"
+                             patternUnits="userSpaceOnUse">
+                        <rect x="0" y="0" width="4" height="4" class="text-yellow-500" fill="currentColor"></rect>
+                    </pattern>
+                </defs>
+                <rect width="404" height="384" fill="url(#74b3fd99-0a6f-4271-bef2-e80eeafdf362)"></rect>
+            </svg>
+            <svg class="absolute top-1/2 right-full transform -translate-y-1/2 -translate-x-32" width="404" height="384"
+                 fill="none" viewBox="0 0 404 384">
+                <defs>
+                    <pattern id="f210dbf6-a58d-4871-961e-36d5016a0f99" x="0" y="0" width="20" height="20"
+                             patternUnits="userSpaceOnUse">
+                        <rect x="0" y="0" width="4" height="4" class="text-yellow-500" fill="currentColor"/>
+                    </pattern>
+                </defs>
+                <rect width="404" height="384" fill="url(#f210dbf6-a58d-4871-961e-36d5016a0f99)"/>
+            </svg>
+            <svg class="absolute bottom-12 left-full transform translate-x-32" width="404" height="384" fill="none"
+                 viewBox="0 0 404 384">
+                <defs>
+                    <pattern id="d3eb07ae-5182-43e6-857d-35c643af9031" x="0" y="0" width="20" height="20"
+                             patternUnits="userSpaceOnUse">
+                        <rect x="0" y="0" width="4" height="4" class="text-yellow-500" fill="currentColor"/>
+                    </pattern>
+                </defs>
+                <rect width="404" height="384" fill="url(#d3eb07ae-5182-43e6-857d-35c643af9031)"/>
+            </svg>
+        </div>
+    </div>
+    <div class="relative px-4 sm:px-6 lg:px-8">
+        <div class="text-lg max-w-prose mx-auto">
+            <h1 id="mission">
+                <!--<span class="block text-lg text-center text-yellow-900 font-semibold">Introducing</span>-->
+                <span class="mt-2 block text-3xl text-center leading-8 font-bold tracking-tight text-yellow-500 sm:text-4xl sm:tracking-tight">Our mission</span>
+            </h1>
+            <p class="mt-8 text-xl text-gray-400 leading-8">We build a global community, bound by a passion for solving security problems such as vulnerabilities. We find owners and disclose to prevent incidents, making the world more secure. We love the internet and aim to understand its weaknesses. We love personal growth, and help our community to grow as individuals and as a group. We are non-partisan, a-political, inclusive and open. We maintain a sense of realism, and we’re protective of sensitive data and understand its impact.</p>
+        </div>
+        <div class="mt-6 prose prose-yellow prose-lg text-gray-300 mx-auto">
+            <h1 id="organisation"><span class="mt-2 block text-3xl text-center leading-8 font-bold tracking-tight text-yellow-500 sm:text-4xl sm:tracking-tight">Organisation</span>
+        </h1>
+            <p>CSIRT.global is a global, volunteer-led, not-for-profit organization, aiming to make the world more secure by going after vulnerabilities no-one else cares for.</p>
+
+            <p>We are a sister organization to the Dutch Institute for Vulnerability Disclosure (DIVD). In 2022, international CSIRT activities were moved to CSIRT.global, as a first step to build an international network of like-minded people.</p>
+
+            <figure>
+                <img class="w-full rounded-lg"
+                     src="images/divd_split.png"
+                     alt="" width="1310" height="873">
+            </figure>
+        </div>
+    </div>
+</div>
+
+<!-- Team with sections -->
+<div class="bg-gray-900">
+    <div class="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
+        <div class="space-y-12">
+            <div class="space-y-5 sm:space-y-4 md:max-w-xl lg:max-w-3xl xl:max-w-none">
+                <h2 id="team" class="text-3xl font-bold text-yellow-500 tracking-tight sm:text-4xl sm:tracking-tight">
+                    The team
+                </h2>
+                <p class="text-xl text-gray-300">Due to the importance of our work and the sensitivity of some of the information we work with, CSIRT.global has two levels of oversight.</p>
+            </div>
+            <div class="space-y-5 sm:space-y-4 md:max-w-xl lg:max-w-3xl xl:max-w-none">
+                <h3 class="text-3xl font-bold text-white tracking-tight sm:text-4xl sm:tracking-tight">Supervisory Board</h3>
+            </div>
+            <p class="text-xl text-gray-300">The supervisory board acts as a “senate”, and can steer important decisons within CSIRT.global. We are incredibly happy these veteran hackers and entrepreneurs share their experience and wisdom with us:
+</p>
+            <ul role="list" class="space-y-4 sm:grid sm:grid-cols-2 sm:gap-6 sm:space-y-0 lg:grid-cols-4 lg:gap-8">
+                <!-- start team member card -->
+                <li class="py-10 px-6 bg-gray-800 text-center rounded-lg xl:px-10 xl:text-left">
+                    <div class="space-y-6 xl:space-y-10">
+                        <img class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56"
+                             src="images/michiel.jpg"
+                             alt="">
+                        <div class="space-y-2 xl:flex xl:items-center xl:justify-between">
+                            <div class="font-medium text-lg leading-6 space-y-1">
+                                <h3 class="text-white">Michiel Prins</h3>
+                                <p class="text-yellow-500">Co-founder, Head of Professional Services HackerOne</p>
+                            </div>
+
+                            <ul role="list" class="flex justify-center space-x-5">
+                                <li>
+                                    <a href="https://twitter.com/michielprins" class="text-gray-400 hover:text-gray-300">
+                                        <span class="sr-only">Twitter</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                            <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.linkedin.com/in/michiel3/" class="text-gray-400 hover:text-gray-300">
+                                        <span class="sr-only">LinkedIn</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                            <path fill-rule="evenodd"
+                                                  d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z"
+                                                  clip-rule="evenodd"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <!-- end team member card -->
+                <li class="py-10 px-6 bg-gray-800 text-center rounded-lg xl:px-10 xl:text-left">
+                    <div class="space-y-6 xl:space-y-10">
+                        <img class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56"
+                             src="images/ronald.jpg"
+                             alt="">
+                        <div class="space-y-2 xl:flex xl:items-center xl:justify-between">
+                            <div class="font-medium text-lg leading-6 space-y-1">
+                                <h3 class="text-white">Ronald Prins</h3>
+                                <p class="text-yellow-500">Co-Founder at Hunt & Hackett</p>
+                            </div>
+
+                            <ul role="list" class="flex justify-center space-x-5">
+                                <li>
+                                    <a href="https://twitter.com/cryptoron" class="text-gray-400 hover:text-gray-300">
+                                        <span class="sr-only">Twitter</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                            <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.linkedin.com/in/ronaldprins/" class="text-gray-400 hover:text-gray-300">
+                                        <span class="sr-only">LinkedIn</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                            <path fill-rule="evenodd"
+                                                  d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z"
+                                                  clip-rule="evenodd"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="py-10 px-6 bg-gray-800 text-center rounded-lg xl:px-10 xl:text-left">
+                    <div class="space-y-6 xl:space-y-10">
+                        <img class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56"
+                             src="images/marco.webp"
+                             alt="">
+                        <div class="space-y-2 xl:flex xl:items-center xl:justify-between">
+                            <div class="font-medium text-lg leading-6 space-y-1">
+                                <h3 class="text-white">Marco Barkmeijer</h3>
+                                <p class="text-yellow-500">Entrepreneur, former cofounder & CEO SecureLink</p>
+                            </div>
+
+                            <ul role="list" class="flex justify-center space-x-5">
+                                <li>
+                                    <a href="https://twitter.com/mbarkmeijer" class="text-gray-400 hover:text-gray-300">
+                                        <span class="sr-only">Twitter</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                            <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.linkedin.com/in/marcobarkmeijer/" class="text-gray-400 hover:text-gray-300">
+                                        <span class="sr-only">LinkedIn</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                            <path fill-rule="evenodd"
+                                                  d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z"
+                                                  clip-rule="evenodd"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="py-10 px-6 bg-gray-800 text-center rounded-lg xl:px-10 xl:text-left">
+                    <div class="space-y-6 xl:space-y-10">
+                        <img class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56"
+                             src="images/edwin.webp"
+                             alt="">
+                        <div class="space-y-2 xl:flex xl:items-center xl:justify-between">
+                            <div class="font-medium text-lg leading-6 space-y-1">
+                                <h3 class="text-white">Edwin van Andel</h3>
+                                <p class="text-yellow-500">Advisor / Hacker / Public Speaker and CTO at Zerocopter</p>
+                            </div>
+
+                            <ul role="list" class="flex justify-center space-x-5">
+                                <li>
+                                    <a href="https://twitter.com/yafsec" class="text-gray-400 hover:text-gray-300">
+                                        <span class="sr-only">Twitter</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                            <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.linkedin.com/in/yafsec/" class="text-gray-400 hover:text-gray-300">
+                                        <span class="sr-only">LinkedIn</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                            <path fill-rule="evenodd"
+                                                  d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z"
+                                                  clip-rule="evenodd"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="space-y-5 sm:space-y-4 md:max-w-xl lg:max-w-3xl xl:max-w-none">
+                <h3 class="text-3xl font-bold text-white tracking-tight sm:text-4xl sm:tracking-tight">Board</h3>
+            </div>
+            <p class="text-xl text-gray-300">The board steers the direction and makes major decisions impacting the organization. Today, the CSIRT.global board members are the founders. This will change going forward: we believe in periodically freshening the organization. This allows for new insights, and fresh leadership to step up and make a difference.
+</p>
+            <ul role="list" class="space-y-4 sm:grid sm:grid-cols-2 sm:gap-6 sm:space-y-0 lg:grid-cols-4 lg:gap-8">
+                <!-- start team member card -->
+                <li class="py-10 px-6 bg-gray-800 text-center rounded-lg xl:px-10 xl:text-left">
+                    <div class="space-y-6 xl:space-y-10">
+                        <img class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56"
+                             src="images/eward.jpg"
+                             alt="">
+                        <div class="space-y-2 xl:flex xl:items-center xl:justify-between">
+                            <div class="font-medium text-lg leading-6 space-y-1">
+                                <h3 class="text-white">Eward Driehuis</h3>
+                                <p class="text-yellow-500">Chair of the board</p>
+                            </div>
+
+                            <ul role="list" class="flex justify-center space-x-5">
+                                <li>
+                                    <a href="https://twitter.com/e3huis" class="text-gray-400 hover:text-gray-300">
+                                        <span class="sr-only">Twitter</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                            <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.linkedin.com/in/ewarddriehuis/" class="text-gray-400 hover:text-gray-300">
+                                        <span class="sr-only">LinkedIn</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                            <path fill-rule="evenodd"
+                                                  d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z"
+                                                  clip-rule="evenodd"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <!-- end team member card -->
+                <li class="py-10 px-6 bg-gray-800 text-center rounded-lg xl:px-10 xl:text-left">
+                    <div class="space-y-6 xl:space-y-10">
+                        <img class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56"
+                             src="images/victor.jpg"
+                             alt="">
+                        <div class="space-y-2 xl:flex xl:items-center xl:justify-between">
+                            <div class="font-medium text-lg leading-6 space-y-1">
+                                <h3 class="text-white">Victor Gevers</h3>
+                                <p class="text-yellow-500">Vice chair</p>
+                            </div>
+
+                            <ul role="list" class="flex justify-center space-x-5">
+                                <li>
+                                    <a href="https://twitter.com/0xdude" class="text-gray-400 hover:text-gray-300">
+                                        <span class="sr-only">Twitter</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                            <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.linkedin.com/in/vgevers/" class="text-gray-400 hover:text-gray-300">
+                                        <span class="sr-only">LinkedIn</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                            <path fill-rule="evenodd"
+                                                  d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z"
+                                                  clip-rule="evenodd"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <!-- start team member card -->
+                <li class="py-10 px-6 bg-gray-800 text-center rounded-lg xl:px-10 xl:text-left">
+                    <div class="space-y-6 xl:space-y-10">
+                        <img class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56"
+                                src="images/lennaert.jpg"
+                                alt="">
+                        <div class="space-y-2 xl:flex xl:items-center xl:justify-between">
+                            <div class="font-medium text-lg leading-6 space-y-1">
+                                <h3 class="text-white">Lennaert Oudshoorn</h3>
+                                <p class="text-yellow-500">Secretary</p>
+                            </div>
+
+                            <ul role="list" class="flex justify-center space-x-5">
+                                <li>
+                                    <a href="https://twitter.com/lennaert89" class="text-gray-400 hover:text-gray-300">
+                                        <span class="sr-only">Twitter</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                            <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.linkedin.com/in/lennaertoudshoorn/" class="text-gray-400 hover:text-gray-300">
+                                        <span class="sr-only">LinkedIn</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                            <path fill-rule="evenodd"
+                                                    d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z"
+                                                    clip-rule="evenodd"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <!-- end team member card -->
+                <!-- start team member card -->
+                <li class="py-10 px-6 bg-gray-800 text-center rounded-lg xl:px-10 xl:text-left">
+                    <div class="space-y-6 xl:space-y-10">
+                        <img class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56"
+                             src="images/shairesh.jpg"
+                             alt="">
+                        <div class="space-y-2 xl:flex xl:items-center xl:justify-between">
+                            <div class="font-medium text-lg leading-6 space-y-1">
+                                <h3 class="text-white">Shairesh Algoe</h3>
+                                <p class="text-yellow-500">Treasurer</p>
+                            </div>
+
+                            <ul role="list" class="flex justify-center space-x-5">
+                                <li>
+                                    <a href="https://twitter.com/shaireshalgoe" class="text-gray-400 hover:text-gray-300">
+                                        <span class="sr-only">Twitter</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                            <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.linkedin.com/in/shaireshalgoe/" class="text-gray-400 hover:text-gray-300">
+                                        <span class="sr-only">LinkedIn</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                            <path fill-rule="evenodd"
+                                                  d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z"
+                                                  clip-rule="evenodd"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <!-- end team member card -->
+            </ul>
+
+            <div class="space-y-5 sm:space-y-4 md:max-w-xl lg:max-w-3xl xl:max-w-none">
+                <h3 class="text-3xl font-bold text-white tracking-tight sm:text-4xl sm:tracking-tight">Management</h3>
+            </div>
+            <p class="text-xl text-gray-300">The management is responsible for day to day operations
+</p>
+            <ul role="list" class="space-y-4 sm:grid sm:grid-cols-2 sm:gap-6 sm:space-y-0 lg:grid-cols-4 lg:gap-8">
+                <!-- start team member card -->
+                <li class="py-10 px-6 bg-gray-800 text-center rounded-lg xl:px-10 xl:text-left">
+                    <div class="space-y-6 xl:space-y-10">
+                        <img class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56"
+                             src="images/vincent.jpg"
+                             alt="">
+                        <div class="space-y-2 xl:flex xl:items-center xl:justify-between">
+                            <div class="font-medium text-lg leading-6 space-y-1">
+                                <h3 class="text-white">Vincent Thiele</h3>
+                                <p class="text-yellow-500">Head of CSIRT</p>
+                            </div>
+
+                            <ul role="list" class="flex justify-center space-x-5">
+                                <li>
+                                    <a href="https://twitter.com/kipenzo" class="text-gray-400 hover:text-gray-300">
+                                        <span class="sr-only">Twitter</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                            <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.linkedin.com/in/thielev" class="text-gray-400 hover:text-gray-300">
+                                        <span class="sr-only">LinkedIn</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                            <path fill-rule="evenodd"
+                                                  d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z"
+                                                  clip-rule="evenodd"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <!-- end team member card -->
+                <li class="py-10 px-6 bg-gray-800 text-center rounded-lg xl:px-10 xl:text-left">
+                    <div class="space-y-6 xl:space-y-10">
+                        <img class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56"
+                             src="images/marielle.jpg"
+                             alt="">
+                        <div class="space-y-2 xl:flex xl:items-center xl:justify-between">
+                            <div class="font-medium text-lg leading-6 space-y-1">
+                                <h3 class="text-white">Marielle Nigg-Droog</h3>
+                                <p class="text-yellow-500">CISO</p>
+                            </div>
+
+                            <ul role="list" class="flex justify-center space-x-5">
+                                <li>
+                                    <a href="#" class="text-gray-400 hover:text-gray-300">
+                                        <span class="sr-only">Twitter</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                            <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.linkedin.com/in/marielle-nigg-droog-4909913/?locale=es_ES" class="text-gray-400 hover:text-gray-300">
+                                        <span class="sr-only">LinkedIn</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                            <path fill-rule="evenodd"
+                                                  d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z"
+                                                  clip-rule="evenodd"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="py-10 px-6 bg-gray-800 text-center rounded-lg xl:px-10 xl:text-left">
+                    <div class="space-y-6 xl:space-y-10">
+                        <img class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56"
+                             src="images/juliette.jpg"
+                             alt="">
+                        <div class="space-y-2 xl:flex xl:items-center xl:justify-between">
+                            <div class="font-medium text-lg leading-6 space-y-1">
+                                <h3 class="text-white">Juliette van Balen</h3>
+                                <p class="text-yellow-500">Data Protection Officer</p>
+                            </div>
+
+                            <ul role="list" class="flex justify-center space-x-5">
+                                <li>
+                                    <a href="#" class="text-gray-400 hover:text-gray-300">
+                                        <span class="sr-only">Twitter</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                            <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.linkedin.com/in/juliette-van-balen-25b96a2/" class="text-gray-400 hover:text-gray-300">
+                                        <span class="sr-only">LinkedIn</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                            <path fill-rule="evenodd"
+                                                  d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z"
+                                                  clip-rule="evenodd"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="relative py-16 bg-gray-900 overflow-hidden">
+    <div class="hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full">
+        <div class="relative h-full text-lg max-w-prose mx-auto" aria-hidden="true">
+            <svg class="absolute top-12 left-full transform translate-x-32" width="404" height="384" fill="none"
+                 viewBox="0 0 404 384">
+                <defs>
+                    <pattern id="74b3fd99-0a6f-4271-bef2-e80eeafdf362" x="0" y="0" width="20" height="20"
+                             patternUnits="userSpaceOnUse">
+                        <rect x="0" y="0" width="4" height="4" class="text-yellow-500" fill="currentColor"></rect>
+                    </pattern>
+                </defs>
+                <rect width="404" height="384" fill="url(#74b3fd99-0a6f-4271-bef2-e80eeafdf362)"></rect>
+            </svg>
+            <svg class="absolute top-1/2 right-full transform -translate-y-1/2 -translate-x-32" width="404" height="384"
+                 fill="none" viewBox="0 0 404 384">
+                <defs>
+                    <pattern id="f210dbf6-a58d-4871-961e-36d5016a0f99" x="0" y="0" width="20" height="20"
+                             patternUnits="userSpaceOnUse">
+                        <rect x="0" y="0" width="4" height="4" class="text-yellow-500" fill="currentColor"/>
+                    </pattern>
+                </defs>
+                <rect width="404" height="384" fill="url(#f210dbf6-a58d-4871-961e-36d5016a0f99)"/>
+            </svg>
+            <svg class="absolute bottom-12 left-full transform translate-x-32" width="404" height="384" fill="none"
+                 viewBox="0 0 404 384">
+                <defs>
+                    <pattern id="d3eb07ae-5182-43e6-857d-35c643af9031" x="0" y="0" width="20" height="20"
+                             patternUnits="userSpaceOnUse">
+                        <rect x="0" y="0" width="4" height="4" class="text-yellow-500" fill="currentColor"/>
+                    </pattern>
+                </defs>
+                <rect width="404" height="384" fill="url(#d3eb07ae-5182-43e6-857d-35c643af9031)"/>
+            </svg>
+        </div>
+    </div>
+    <div class="relative px-4 sm:px-6 lg:px-8">
+        <div class="text-lg max-w-prose mx-auto">
+            <h1 id="code">
+                <!--<span class="block text-lg text-center text-yellow-900 font-semibold">Introducing</span>-->
+                <span class="mt-2 block text-3xl text-center leading-8 font-bold tracking-tight text-yellow-500 sm:text-4xl sm:tracking-tight">Code of Conduct</span>
+            </h1>
+            <p class="mt-8 text-xl text-gray-400 leading-8">All CSIRT.global volunteers adhere to our Code of Conduct:</p>
+        </div>
+        <div class="mt-6 prose prose-slate prose-lg text-gray-500 mx-auto">
+        <ol role="list">
+          <li>CSIRT.global is a global Computer Security Incident Response Team. We are led by volunteers, and work with volunteers who aim to make the digital world safer.</li>
+          <li>CSIRT.global aims to disclose vulnerabilities and report findings, to those who can fix them.</li>
+          <li>CSIRT.global performs the last steps in an extensive process, performed by associated organisations, individual researchers, and third parties. We are aware of the importance of these last steps and take the CSIRT process very seriously.</li>
+          <li>CSIRT.global is tied (by articles of association) to the Dutch Institute for Vulnerability Disclosure. That said, they are two2 separate organisations and separate legal entities. Functionally, whereas the DIVD is the primarymain source of vulnerability information and scanning information, CSIRT.global aims to have the issues fixed.</li>
+          <li>CSIRT.global uses information provided by third parties. We are aware this information is generated by activities such as:</li>
+          <ul role="list">
+            <li>Scan the internet for vulnerabilities, mostly Common Vulnerabilities and Exposures (CVEs), and report our findings and possible solutions to the owners of these systems.</li>
+            <li>Analysing online systems for new vulnerabilities (zero-days), report our findings to the makers, and try to help them fixout in fixing the vulnerabilities.</li>
+            <li>Analysing databases with leaked credentials and reportingreport to the organisations or people who are compromised to take appropriate measures.</li>
+          </ul>
+          <li>As we work with sensitive data, gathered without informed consent, we established this Code of Conduct to provide an ethical base for the work we do.</li>
+          <li>While performing incident responses, we aim to work both with trusted partners to extend our reach, as well as notifying as many individual organisations and people as possible.</li>
+          <li>We are aware that we work with information acquired by operating at the edges of what is legally allowed, so we proceed by these three criteria commonly used in court cases on vulnerability disclosures:</li>
+          <ul role="list">
+            <li>Societal need: we do vulnerability disclosure to prevent online damage to as many internet users as possible and don’t serve any particular financial, political or individual interests.</li>
+            <li>Principle of Proportionality: we serve this need with appropriate means. Our research should increase and not decrease the integrity and availability of online systems.</li>
+            <li>Principle of Subsidiarity: if several means are available to meet the need, we opt for the one which has the least impact.</li>
+          </ul>
+          <li>We trust third party findings when we can, but validate findings when needed. We aim to prevent reporting false positives or miss false negatives and sometimes need to verify if a vulnerability is actually present. We use custom-made scripts based on publicly available proof of concepts or non-weaponized exploit code and take good care that we don’t damage systems, download too much personal data, or create backdoors.</li>
+          <li>Our findings typically consist of lists with several to millions of IP addresses, the type of vulnerability found, contact information, and metadata (e.g. timestamps, scripts, researchers working on the data). This is sensitive data, so we take all precautions necessary to protect the confidentiality of this data.</li>
+          <li>We disclose zero-day vulnerabilities to the vendor first, then request CVE numbers and negotiate a reasonable time span for disclosing it to our Trusted Information Sharing Partners and the broader public. Ideally, the disclosure is preceded by a patch. If a vendor is obviously slow in providing the patch and it is likely others may discover and abuse the vulnerability, we may consider disclosure to warn potential victims and advise them on mitigation measures.</li>
+          <li>We report the CVEs we find to the owners of the systems, mostly by generating email addresses based on their domain name, such as info@, security@ or abuse@ and to the listed abuse addresses of IP owners. If owners can’t be found in automated ways, we may search for them by leveraging (open) sources.</li>
+          <li>We may also send them our findings through our Trusted Information Sharing Partners, who are, for example, Computer Emergency Response Teams, Computer Security Incident Response Teams, Internet Service Providers, governmental organisations or other research institutes.</li>
+          <li>While doing our work, we focus on our mission of making the internet and the connected world more secure. We don’t serve the needs of governments, law enforcement, enterprise organisations, individuals or anyone else.</li>
+          <li>Due diligence in our CSIRT process requires following our disclosures up. Therefore, we need to store data and log our activities. We may also need this data in case of a dispute. We minimize the amount of personal data we gather and store and are aware that an IP address can also be perceived as information relating to an identified or identifiable natural person. We believe that our processing of this data is proportional to our goals of making the internet and the connected world more secure.</li>
+          <li>Depending on the indecent, we might inform the broader security community and/or the media about our findings. We only use aggregated statistics and/or trend information. We don’t use personal identifiable information (PII). </li>
+          <li>Any reporting we do, is available from our website https://csirt.global. </li>
+          <li>Our reports are available under the Creative Commons License.</li>
+          <li>We report vulnerable systems. While we might channel 3rd party remediation information on a best-effort base, remediation is solely the responsibility of the systems owner.</li>
+          <li>CSIRT.global is responsible for making members aware of these rules. It is the responsibility of each member to comply. If they don’t, the board will take appropriate measures, for instance by revoking their account. </li>
+          <li>We are aware of geographical differences, with regard to culture, law and customs. We provide escalation paths, if conflicts arise due to the differences in multiple geographical regions we operate in. Members are encouraged to use these.</li>
+          <li>On an interpersonal level, we are an open, welcoming, learning and teaching organisation. We believe in diversity.</li>
+          <li>We encourage members challenging other members’ behaviour if they feel it’s not appropriate, while at the same time provide escalation paths for those that choose not to address issues directly. We understand there might be very good reasons for not addressing issues directly.</li>
+          <li>Suggestions and feedback are welcome. Contact our Secretary Lennaert Oudshoorn.</li>
+        </ol>
+      </div>
+        <div class="mt-6 prose prose-yellow prose-lg text-gray-300 mx-auto">
+            <h1 id="help"><span class="mt-2 block text-3xl text-center leading-8 font-bold tracking-tight text-yellow-500 sm:text-4xl sm:tracking-tight">How you can help</span>
+        </h1>
+        <ul role="list">
+            <li>If you want to make a difference, you might want to consider volunteering. We offer a meaningful experience, fantastic colleagues, an international network, and work experience in research, CSIRT, comms, and other related activities. Becoming a volunteer requires a few formalities, including adhering to the [Code of Conduct] and signing a volunteer agreement.</li>
+            <li>Become a volunteer.</li>
+            <li>If you want to get in touch, drop a line to inquiries@csirt.global or get in touch with one of the team via social media.</li>
+        </ul>
+        <h2>Opportunities at CSIRT.Global</h2>
+        <ul role="list">
+            <li><a target=”_blank”  href="https://theorg.com/org/csirt-global/jobs/project-manager-bug-bount-6250d8f5">Bug Bounty program manager</a></li>
+            <li><a target=”_blank”  href="https://theorg.com/org/csirt-global/jobs/head-of-research-887359f8">Head of Research</a></li>
+        </ul>
+        </div>
+    </div>
 </div>
 
 </body>
 </html>
-
