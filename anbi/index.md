@@ -1,5 +1,5 @@
 
-<a href="/"><img src="https://csirt.global/images/csirt_global_logo.png" alt="CSIRT.global"></a>
+<a href="/"><img src="https://csirt.global/images/csirt_global_logo.png" alt="CSIRT.global" height="300px"></a>
 
 ## ANBI
 - [Stichting CSIRT.global](https://openkvk.nl/openkvk/rechtspersoon-85998265-stichting-csirtglobal)
