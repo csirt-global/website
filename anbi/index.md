@@ -1,3 +1,6 @@
+
+<a href="/"><img src="https://csirt.global/images/csirt_global_logo.png" alt="CSIRT.global"></a>
+
 ## ANBI
 - [Stichting CSIRT.global](https://openkvk.nl/openkvk/rechtspersoon-85998265-stichting-csirtglobal)
 - RSIN: 863825655
