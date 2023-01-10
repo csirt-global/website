@@ -2354,3 +2354,9 @@ video {
     text-align: left;
   }
 }
+
+@media (orientation: portrait) {
+  #logo {
+    height: 100px;
+  }
+}
