@@ -2360,3 +2360,9 @@ video {
     height: 100px;
   }
 }
+
+@media screen and (max-width: 744px) {
+  #logo {
+    height: 100px;
+  }
+}
