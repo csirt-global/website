@@ -4,8 +4,8 @@ Contact: https://app.zerocopter.com/en/cvd/8b2fbf09-539f-4b09-bee0-2ec875cb3321
 Preferred-Languages: en
 Expires: 2025-01-01T00:01:00.000Z
 
-# Vulnerability Disclosure Policy
-Policy: https://app.zerocopter.com/en/cvd/f9afbf32-ce59-48ed-96f2-ac4410595aa4
+# Vulnerability Disclosure Policy - see 'CVD Statement' in the page below
+Policy: https://app.zerocopter.com/en/cvd/8b2fbf09-539f-4b09-bee0-2ec875cb3321
 
 # CISRT.global is a non-profit organisation run by volunteers. If you want to help out as a volunteer, please feel free to reach out to us:
 Hiring: https://csirt.global/#help
