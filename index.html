@@ -6,8 +6,8 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>CSIRT.Global</title>
-    <link href="dist/styles.css" rel="stylesheet">
-    <script src="//unpkg.com/alpinejs" defer></script>
+    <link href="https://csirt.global/dist/styles.css" rel="stylesheet">
+    <script src="https://unpkg.com/alpinejs" defer></script>
 </head>
 <body class="antialiased font-sans" data-new-gr-c-s-check-loaded="14.1075.0" data-gr-ext-installed="">
 
@@ -151,6 +151,7 @@
 
 <!-- Content (Black) -->
 <div class="relative py-16 bg-gray-900 overflow-hidden">
+    <!-- side dots-->
     <div class="hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full">
         <div class="relative h-full text-lg max-w-prose mx-auto" aria-hidden="true">
             <svg class="absolute top-12 left-full transform translate-x-32" width="404" height="384" fill="none"
@@ -185,25 +186,60 @@
             </svg>
         </div>
     </div>
+    <!-- Mission section -->
     <div class="relative px-4 sm:px-6 lg:px-8">
         <div class="text-lg max-w-prose mx-auto">
             <h1 id="mission">
                 <!--<span class="block text-lg text-center text-yellow-900 font-semibold">Introducing</span>-->
                 <span class="mt-2 block text-3xl text-center leading-8 font-bold tracking-tight text-yellow-500 sm:text-4xl sm:tracking-tight">Our mission</span>
             </h1>
-            <p class="mt-8 text-xl text-gray-400 leading-8">We build a global community, bound by a passion for solving security problems such as vulnerabilities. We find owners and disclose to prevent incidents, making the world more secure. We love the internet and aim to understand its weaknesses. We love personal growth, and help our community to grow as individuals and as a group. We are non-partisan, a-political, inclusive and open. We maintain a sense of realism, and we’re protective of sensitive data and understand its impact.</p>
+            <p class="mt-8 text-xl text-gray-400 leading-8">
+                We build a global community, bound by a passion for solving security problems such as vulnerabilities. 
+                We find owners and disclose to prevent incidents, making the world more secure. We love the internet and aim to understand its weaknesses. 
+                We love personal growth, and help our community to grow as individuals and as a group. 
+                We are non-partisan, a-political, inclusive and open. 
+                We maintain a sense of realism, we’re protective of sensitive data and understand its impact.
+            </p>
+            <p class="mt-8 text-xl text-gray-400 leading-8">Our work consists of 3 major strands:</p>
+            <details class="mt-8 text-xl text-gray-400 leading-8">
+                <summary class="text-yellow-500">Bug Bounties</summary>
+                <p class="mt-4">We run fully funded Bug Bounty programs to help charities and NGOs find and fix vulnerabilities in their infrastructure. This entails a few stages:</p>
+                <dl role="list">
+                    <dt class="text-yellow-500 mt-6">Preliminary Research</dt><dd>our skilled team of internal, vetted researchers will analyse your infrastructure to securely inform you of any easy-wins such as outdated software</dd>
+                    <dt class="text-yellow-500 mt-6">Bug Bounty Program</dt><dd>The next stage invites external, vetted researchers to find additional vulnerabilities. To incentivise their support, they will be financially compensated based on the severity of the findings. All of the prize money is paid by CSIRT.Global.</dd>
+                    <dt class="text-yellow-500 mt-6">Remediation</dt><dd>We will work with your IT/Security team(s) to help you resolve all the findings and secure your systems.</dd>
+                    <dt class="text-yellow-500 mt-6">Optional Promotion</dt><dd>Congratulations, your organisation is more secure than it was yesterday. Some organisations are instincively ashamed that they weren't always totally secure. Don't be - everyone has problems, not everyone finds and fixes them :) We will assist in promoting your success and the skills of the associated researchers.</dd>
+                </ol>
+                <p class="mt-6">To nominate your organisation as a beneficiary please <a class="text-yellow-500" href="mailto:inquiries@csirt.global?subject=Bug%20Bounty">contact our Bug Bounty team</a>.</p>
+            </details>
+            <details class="mt-8 text-xl text-gray-400 leading-8">
+                <summary class="text-yellow-500">Exploit Research</summary>
+                <p>We have a team of skilled Exploit Researchers who look for previously unknown vulnerabilities (zero-days) in public infrastructure so they can be responsibly reported and fixed, leaving the community safer.</p>
+                <p class="mt-2">We have 3 tiers of researchers with a mentoring and training system to reduce the global shortage of skilled Cyber practitioners.</p>
+                <p class="mt-2">For more info, see our <a class="text-yellow-500" href="https://theorg.com/org/csirt-global/jobs/researcher-d5326620">Opportunities</a>.</p>
+            </details>
+            <details class="mt-8 text-xl text-gray-400 leading-8">
+                <summary class="text-yellow-500">Incident Response (<a class="text-white" href="https://en.wikipedia.org/wiki/Computer_emergency_response_team#:~:text=Cyber%20Security%20Incident%20Response%20Team" rel="help" target="_blank">CSIRT</a>)</summary>
+                <p>We have a team of experienced incident responders who can:</p>
+                <ul role="list">
+                    <li class="mt-2">Identify systems vulnerable to widespread exploitation, contact their owners and assist them in fixing the problem. We cooperate with National Cyber Security Centers (NCSCs) in verious countries to help with this.</li>
+                    <li class="mt-2">Assist charities and NGOs that have been compromised and require expert assistance.</li>
+                </ul>
+                <p class="mt-2">To find out more, please see our <a class="text-yellow-500" href="https://theorg.com/org/csirt-global/jobs/response-team-lead-11212914">Opportunities</a> or <a class="text-yellow-500" href="mailto:inquiries@csirt.global?subject=CSIRT">contact the IR team</a>.</p>
+            </details>
         </div>
+        <!-- Organisation-->
         <div class="mt-6 prose prose-yellow prose-lg text-gray-300 mx-auto">
             <h1 id="organisation"><span class="mt-2 block text-3xl text-center leading-8 font-bold tracking-tight text-yellow-500 sm:text-4xl sm:tracking-tight">Organisation</span>
         </h1>
             <p>CSIRT.global is a global, volunteer-led, not-for-profit organization, aiming to make the world more secure by going after vulnerabilities no-one else cares for.</p>
 
-            <p>We are a sister organization to the Dutch Institute for Vulnerability Disclosure (DIVD). In 2022, international CSIRT activities were moved to CSIRT.global, as a first step to build an international network of like-minded people.</p>
+            <p>We are a sister organization to the Dutch Institute for Vulnerability Disclosure (<a href="divd.nl">DIVD</a>). In 2022, international CSIRT activities were moved to CSIRT.global, as a first step to build an international network of like-minded people.</p>
 
             <figure>
                 <img class="w-full rounded-lg"
                      src="images/divd_split.png"
-                     alt="" width="1310" height="873">
+                     alt="Diagram showing the split of DIVD into its new sibling infrastructure" width="1310" height="873">
             </figure>
         </div>
     </div>
@@ -366,7 +402,7 @@
             </ul>
 
             <div class="space-y-5 sm:space-y-4 md:max-w-xl lg:max-w-3xl xl:max-w-none">
-                <h3 class="text-3xl font-bold text-white tracking-tight sm:text-4xl sm:tracking-tight">Board</h3>
+                <h3 id="board" class="text-3xl font-bold text-white tracking-tight sm:text-4xl sm:tracking-tight">Board</h3>
             </div>
             <p class="text-xl text-gray-300">The board steers the direction and makes major decisions impacting the organization. Today, the CSIRT.global board members are the founders. This will change going forward: we believe in periodically freshening the organization. This allows for new insights, and fresh leadership to step up and make a difference.
 </p>
@@ -665,6 +701,7 @@
             </svg>
         </div>
     </div>
+    <!-- Code of Conduct -->
     <div class="relative px-4 sm:px-6 lg:px-8">
         <div class="text-lg max-w-prose mx-auto">
             <h1 id="code">
@@ -711,13 +748,16 @@
           <li>Suggestions and feedback are welcome. Contact our Secretary <a href="#lennaert" class="font-medium text-yellow-700 hover:text-yellow-900">Lennaert Oudshoorn</a>.</li>
         </ol>
       </div>
+      <!-- How you can help -->
         <div class="mt-6 prose prose-yellow prose-lg text-gray-300 mx-auto">
             <h1 id="help"><span class="mt-2 block text-3xl text-center leading-8 font-bold tracking-tight text-yellow-500 sm:text-4xl sm:tracking-tight">How you can help</span>
         </h1>
         <ul role="list">
-            <li>If you want to make a difference, you might want to consider volunteering. We offer a meaningful experience, fantastic colleagues, an international network, and work experience in research, CSIRT, comms, and other related activities. Becoming a volunteer requires a few formalities, including adhering to the [Code of Conduct] and signing a volunteer agreement.</li>
-            <li><a href="/join/">Become a volunteer</a>.</li>
-            <li>If you want to get in touch, drop a line to inquiries@csirt.global or get in touch with one of the team via social media.</li>
+            <li>If you want to make a difference, you might want to consider volunteering. 
+                We offer a meaningful experience, fantastic colleagues, an international network, and work experience in research, CSIRT, comms, and other related activities. 
+                Becoming a volunteer requires a few formalities, including adhering to the <a href="#code">Code of Conduct</a> and signing a volunteer agreement.</li>
+            <li><a href="/join/">Become a volunteer</a></li>
+            <li>If you want to get in touch, <a href="mailto:inquiries@csirt.global?subject=volunteering">email us</a> or get in touch with one of the <a href="#board">team</a> via social media.</li>
         </ul>
         <h2>Opportunities at CSIRT.Global</h2>
         <ul role="list">
@@ -726,7 +766,7 @@
             <li><a target=”_blank” href="https://theorg.com/org/csirt-global/jobs/head-of-people-and-cultur-c15acc85">Head of People and Culture (P&C)</a></li>
         </ul>
            
-            
+        <!-- ANBI -->
         <h2 id="anbi"><img src="images/ANBI_FC.png" width="100"></h2>
         <ul role="list">
             <li><a href="https://openkvk.nl/openkvk/rechtspersoon-85998265-stichting-csirtglobal">Stichting CSIRT.global</a></li>
