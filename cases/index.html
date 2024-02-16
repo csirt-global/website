@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSIRT.Global</title>
+    <link href="https://csirt.global/dist/styles.css" rel="stylesheet">
+    <script src="https://unpkg.com/alpinejs" defer></script>
+</head  >
+<body class="antialiased font-sans bg-gray-900" data-new-gr-c-s-check-loaded="14.1075.0" data-gr-ext-installed="">
+
+<!-- Header (black) -->
+<div class="relative bg-gray-900 overflow-hidden"
+     x-data="{ open: false, focus: true }" @keydown.escape="open = false">
+    <div class="hidden sm:block sm:absolute sm:inset-y-0 sm:h-full sm:w-full" aria-hidden="true">
+        <div class="relative h-full max-w-7xl mx-auto">
+            <svg class="absolute right-full transform translate-y-1/4 translate-x-1/4 lg:translate-x-1/2"
+                 width="404" height="784" fill="none" viewBox="0 0 404 784">
+                <defs>
+                    <pattern id="f210dbf6-a58d-4871-961e-36d5016a0f49" x="0" y="0" width="20" height="20"
+                             patternUnits="userSpaceOnUse">
+                        <rect x="0" y="0" width="4" height="4" class="text-yellow-500" fill="currentColor"></rect>
+                    </pattern>
+                </defs>
+                <rect width="404" height="784" fill="url(#f210dbf6-a58d-4871-961e-36d5016a0f49)"></rect>
+            </svg>
+            <svg class="absolute left-full transform -translate-y-3/4 -translate-x-1/4 md:-translate-y-1/2 lg:-translate-x-1/2"
+                 width="404" height="784" fill="none" viewBox="0 0 404 784">
+                <defs>
+                    <pattern id="5d0dd344-b041-4d26-bec4-8d33ea57ec9b" x="0" y="0" width="20" height="20"
+                             patternUnits="userSpaceOnUse">
+                        <rect x="0" y="0" width="4" height="4" class="text-yellow-500" fill="currentColor"></rect>
+                    </pattern>
+                </defs>
+                <rect width="404" height="784" fill="url(#5d0dd344-b041-4d26-bec4-8d33ea57ec9b)"></rect>
+            </svg>
+        </div>
+    </div>
+
+    <div class="relative pt-6 pb-16 sm:pb-24">
+        <div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6">
+                <!-- Desktop menu -->
+                <nav class="relative flex items-center justify-between sm:h-10 md:justify-center" aria-label="Global">
+                    <div class="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0">
+                        <div class="flex items-center justify-between w-full md:w-auto">
+                            <a href="/index.html#mission">
+                                <span class="sr-only">Workflow</span>
+                                <img class="h-8 w-auto sm:h-10"
+                                     src="/images/csirt_global_logo.png"
+                                     alt="CSIRT Global logo">
+                            </a>
+                            <div class="-mr-2 flex items-center md:hidden">
+                                <button type="button"
+                                        class="bg-yellow-700 rounded-md p-2 inline-flex items-center justify-center text-gray-900 hover:text-gray-700 hover:bg-yellow-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-yellow-500"
+                                        @click="open = true" @mousedown="if (open) $event.preventDefault()"
+                                        aria-expanded="false" :aria-expanded="open.toString()">
+                                    <span class="sr-only">Open main menu</span>
+                                    <svg class="h-6 w-6" x-description="Heroicon name: outline/menu"
+                                         xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                         stroke-width="2" stroke="currentColor" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                              d="M4 6h16M4 12h16M4 18h16"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden md:flex md:space-x-10">
+
+                        <a href="/index.html#mission" class="font-medium text-yellow-700 hover:text-yellow-900">Mission</a>
+
+                        <a href="/index.html#organisation" class="font-medium text-yellow-700 hover:text-yellow-900">Organisation</a>
+
+                        <a href="/index.html#team" class="font-medium text-yellow-700 hover:text-yellow-900">Team</a>
+
+                        <a href="/index.html#code" class="font-medium text-yellow-700 hover:text-yellow-900">Code of conduct</a>
+
+                        <a href="/index.html#help" class="font-medium text-yellow-700 hover:text-yellow-900">Help us</a>
+
+                        <a href="/cases" class="font-medium text-yellow-700 hover:text-yellow-900">Cases</a>
+
+                    </div>
+                </nav>
+            </div>
+
+            <!-- Mobile menu -->
+            <div x-show="open" x-transition:enter="duration-150 ease-out"
+                 x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100"
+                 x-transition:leave="duration-100 ease-in" x-transition:leave-start="opacity-100 scale-100"
+                 x-transition:leave-end="opacity-0 scale-95"
+                 x-description="Mobile menu, show/hide based on menu open state."
+                 class="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
+                 @click.away="open = false">
+                <div class="rounded-lg shadow-md bg-gray-700 ring-1 ring-black ring-opacity-5 overflow-hidden">
+                    <div class="px-5 pt-4 flex items-center justify-between">
+                        <div>
+                            <img class="h-8 w-auto"
+                                 src="https://tailwindui.com/img/logos/workflow-mark.svg?color=yellow&amp;shade=600"
+                                 alt="">
+                        </div>
+                        <div class="-mr-2">
+                            <button type="button"
+                                    class="bg-yellow-500 rounded-md p-2 inline-flex items-center justify-center text-gray-700 hover:text-gray-500 hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-yellow-500"
+                                    @click="open = false">
+                                <span class="sr-only">Close menu</span>
+                                <svg class="h-6 w-6" x-description="Heroicon name: outline/x"
+                                     xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                     stroke-width="2" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                          d="M6 18L18 6M6 6l12 12"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="px-2 pt-2 pb-3">
+                        <a href="/index.html#mission"
+                           class="block px-3 py-2 rounded-md text-base font-medium text-yellow-700 hover:text-yellow-500 hover:bg-gray-500">Mission</a>
+
+                        <a href="/index.html#organisation"
+                           class="block px-3 py-2 rounded-md text-base font-medium text-yellow-700 hover:text-yellow-500 hover:bg-gray-500">Organisation</a>
+
+                        <a href="/index.html#team"
+                           class="block px-3 py-2 rounded-md text-base font-medium text-yellow-700 hover:text-yellow-500 hover:bg-gray-500">Team</a>
+
+                        <a href="/index.html#code"
+                           class="block px-3 py-2 rounded-md text-base font-medium text-yellow-700 hover:text-yellow-500 hover:bg-gray-500">Code of conduct</a>
+
+                        <a href="/index.html#help"
+                           class="block px-3 py-2 rounded-md text-base font-medium text-yellow-700 hover:text-yellow-500 hover:bg-gray-500">Help us</a>
+
+                        <a href="/cases"
+                           class="block px-3 py-2 rounded-md text-base font-medium text-yellow-700 hover:text-yellow-500 hover:bg-gray-500">Cases</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Content (Black) -->
+<div class="relative py-16 bg-gray-900 overflow-hidden">
+    <!-- side dots-->
+    <div class="hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full">
+        <div class="relative h-full text-lg max-w-prose mx-auto" aria-hidden="true">
+            <svg class="absolute top-12 left-full transform translate-x-32" width="404" height="384" fill="none"
+                 viewBox="0 0 404 384">
+                <defs>
+                    <pattern id="74b3fd99-0a6f-4271-bef2-e80eeafdf362" x="0" y="0" width="20" height="20"
+                             patternUnits="userSpaceOnUse">
+                        <rect x="0" y="0" width="4" height="4" class="text-yellow-500" fill="currentColor"></rect>
+                    </pattern>
+                </defs>
+                <rect width="404" height="384" fill="url(#74b3fd99-0a6f-4271-bef2-e80eeafdf362)"></rect>
+            </svg>
+            <svg class="absolute top-1/2 right-full transform -translate-y-1/2 -translate-x-32" width="404" height="384"
+                 fill="none" viewBox="0 0 404 384">
+                <defs>
+                    <pattern id="f210dbf6-a58d-4871-961e-36d5016a0f99" x="0" y="0" width="20" height="20"
+                             patternUnits="userSpaceOnUse">
+                        <rect x="0" y="0" width="4" height="4" class="text-yellow-500" fill="currentColor"/>
+                    </pattern>
+                </defs>
+                <rect width="404" height="384" fill="url(#f210dbf6-a58d-4871-961e-36d5016a0f99)"/>
+            </svg>
+            <svg class="absolute bottom-12 left-full transform translate-x-32" width="404" height="384" fill="none"
+                 viewBox="0 0 404 384">
+                <defs>
+                    <pattern id="d3eb07ae-5182-43e6-857d-35c643af9031" x="0" y="0" width="20" height="20"
+                             patternUnits="userSpaceOnUse">
+                        <rect x="0" y="0" width="4" height="4" class="text-yellow-500" fill="currentColor"/>
+                    </pattern>
+                </defs>
+                <rect width="404" height="384" fill="url(#d3eb07ae-5182-43e6-857d-35c643af9031)"/>
+            </svg>
+        </div>
+    </div>
+    <!-- Content -->
+    <div class="relative px-4 sm:px-6 lg:px-8">
+        <div class="text-lg max-w-prose mx-auto">
+            <h1 class="mt-2 block text-3xl text-center leading-8 font-bold tracking-tight text-yellow-500 sm:text-4xl sm:tracking-tight">Cases</h1>
+            <h2 class="mt-6 block text-2xl text-center leading-8 font-bold tracking-tight text-yellow-500 sm:text-2xl sm:tracking-tight">Current</h2>
+            <p class="mt-4 text-xl text-gray-400 leading-8">CSIRT.Global is currently helping secure the global internet presence against:</p>
+            <ul>
+                <li><a class="text-yellow-500" href="CG-2024-00001/index.html">JetBrains TeamCity Authentication Bypass - CVE-2024-23917 - CG-2024-00001</a></li>
+            </ul>
+
+            <h2 class="mt-6 block text-2xl text-center leading-8 font-bold tracking-tight text-yellow-500 sm:text-2xl sm:tracking-tight">Closed</h2>
+            <p class="mt-4 text-xl text-gray-400 leading-8">CSIRT.Global has previously helped secure the global internet presence against:</p>
+            <ul>
+                <li><a class="text-yellow-500" href="https://www.cve.org/CVERecord?id=CVE-2023-41256">CVE-2023-41256</a></li>
+                <li><a class="text-yellow-500" href="https://www.cve.org/CVERecord?id=CVE-2023-38256">CVE-2023-38256</a></li>
+                <li><a class="text-yellow-500" href="https://www.cve.org/CVERecord?id=CVE-2023-36497">CVE-2023-36497</a></li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
