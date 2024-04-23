@@ -7,13 +7,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>CSIRT.Global</title>
     <link href="https://csirt.global/dist/styles.css" rel="stylesheet">
+    <link href="../../css/style.css" rel="stylesheet">
     <script src="https://unpkg.com/alpinejs" defer></script>
-</head  >
+</head>
 <body class="antialiased font-sans bg-gray-900" data-new-gr-c-s-check-loaded="14.1075.0" data-gr-ext-installed="">
 
 <!-- Header (black) -->
 <div class="relative bg-gray-900 overflow-hidden"
-     x-data="{ open: false, focus: true }" @keydown.escape="open = false">
+     x-data="{ open: false, focus: true }" @keydown.escape="open = false"
+>
     <div class="hidden sm:block sm:absolute sm:inset-y-0 sm:h-full sm:w-full" aria-hidden="true">
         <div class="relative h-full max-w-7xl mx-auto">
             <svg class="absolute right-full transform translate-y-1/4 translate-x-1/4 lg:translate-x-1/2"
@@ -177,35 +179,53 @@
             </svg>
         </div>
     </div>
-    <!-- Content -->
     <div class="relative px-4 sm:px-6 lg:px-8">
         <div class="text-lg max-w-prose mx-auto">
-            <h1 class="mt-2 block text-3xl text-center leading-8 font-bold tracking-tight text-yellow-500 sm:text-4xl sm:tracking-tight">Cases</h1>
-            <h2 class="mt-6 block text-2xl text-center leading-8 font-bold tracking-tight text-yellow-500 sm:text-2xl sm:tracking-tight">Current</h2>
-            <p class="mt-4 text-xl text-gray-400 leading-8">CSIRT.Global is currently helping secure the global internet presence against:</p>
-            <ul>
-                <li><a class="text-yellow-500" href="CG-2024-00003/index.html">Exposed Credentials in Public Buckets - CG-2024-00003</a></li>
-               
-            </ul>
-
-            <h2 class="mt-6 block text-2xl text-center leading-8 font-bold tracking-tight text-yellow-500 sm:text-2xl sm:tracking-tight">Closed</h2>
-            <p class="mt-4 text-xl text-gray-400 leading-8">CSIRT.Global has previously helped secure the global internet presence against:</p>
-            <ul>
-                <li><a class="text-yellow-500" href="CG-2024-00001/index.html">JetBrains TeamCity Authentication Bypass - CVE-2024-23917 - CG-2024-00001</a></li>
-                <li><a class="text-yellow-500" href="CG-2024-00002/index.html">Connectwise ScreenConnect Authentication Bypass - CG-2024-00002</a></li>
-                <li><a class="text-yellow-500" href="https://www.cve.org/CVERecord?id=CVE-2023-41256">CVE-2023-41256</a></li>
-                <li><a class="text-yellow-500" href="https://www.cve.org/CVERecord?id=CVE-2023-38256">CVE-2023-38256</a></li>
-                <li><a class="text-yellow-500" href="https://www.cve.org/CVERecord?id=CVE-2023-36497">CVE-2023-36497</a></li>
-            </ul>
-
-        </div>
-    </div>
+    <h1 class="mt-2 block text-3xl text-center leading-8 font-bold tracking-tight text-yellow-500 sm:text-4xl sm:tracking-tight">CG-2024-00003</h1>
+    <h2 class="mt-2 block text-2xl text-center leading-8 font-bold tracking-tight text-yellow-500 sm:text-2xl sm:tracking-tight">Hope: Exposed Credentials in Public Buckets</h2>
+    <p class="mt-4 text-xl text-gray-400 leading-8">
+        <b>Case:</b> CG-2024-00003 Hope: Exposed Credentials in Public Buckets<br>
+        <b>Case lead:</b> <a class="text-yellow-500" href="/index.html#soufian:~:text=Soufian%20El%20Yadmani">Soufian El Yadmani</a><br>
+        <b>Researchers:</b> Gabriel Tarsia, Michael Rowley<br>
+        <b>CWE(s):</b> <a class="text-yellow-500" href="https://cwe.mitre.org/data/definitions/538.html">CWE-538: Insertion of Sensitive Information into Externally-Accessible File or Directory</a><br> <a class="text-yellow-500" href="https://cwe.mitre.org/data/definitions/522.html">CWE-522: Insufficiently Protected Credentials</a> <br>
+        <b>Published:</b> 15 April 2024 09:00 CET<br>    
+        <b>Last updated:</b> 19 Apr 2024
+    </p>
+    <h3 class="mt-6 block text-xl text-center leading-8 font-bold tracking-tight text-yellow-500 sm:text-xl sm:tracking-tight">Summary</h3>
+    <p class="mt-4 text-xl text-gray-400 leading-8">Public Buckets are exposed to the world at large. While they can be useful for things like websites and public data stores,
+         it is unlikely that credentials will be intentionally placed here. During this case, we scanned large numbers of publicly exposed buckets from providers like:
+    </p>
+    <ul class="mt-4 text-xl text-gray-400 leading-8">
+        <li>AWS S3</li>
+        <li>Azure Blob Storage</li>
+        <li>Google Cloud Platform Buckets</li>
+    </ul>
+    
+    <p class="mt-6 text-xl text-gray-400 leading-8">for credentials like:</p>
+    <ul class="mt-4 text-xl text-gray-400 leading-8">
+        <li>AWS Access Tokens</li>
+        <li>OAuth Tokens</li>
+        <li>API keys</li>
+        <li>GCP Service Accounts</li>
+    </ul>
+    <h3 class="mt-6 block text-xl text-center leading-8 font-bold tracking-tight text-yellow-500 sm:text-xl sm:tracking-tight">Response Actions</h3>
+    <ol class="mt-4 text-xl text-gray-400 leading-8">
+      <li>Remove the publicly exposed credentials from the bucket</li>
+      <li>Rotate the publicly exposed credentials</li>
+      <li>Determine if the other bucket contents should be public and restrict access appropriately</li>
+      <li>Analyse logs to determine if the exposed credential was abused</li>
+      <li>Undo abusive actions</li>
+    </ol>
+    <p class="mt-6 text-xl text-gray-400 leading-8">For some credential types (notably cloud provider access), the potential for abuse is high and can lead to further lateral movement and privilege escalation.
+    Amazon have provided some detailed playbooks to tackle these situations:</p>
+    <ul class="mt-4 text-xl text-yellow-500 leading-8">
+        <li><a href="https://github.com/aws-samples/aws-customer-playbook-framework/blob/main/docs/S3_Public_Access.md">Public Access to S3</a></li>
+        <li><a href="https://github.com/aws-samples/aws-incident-response-playbooks/blob/master/playbooks/IRP-DataAccess.md">Incident Response: Data Access</a></li>
+        <li><a href="https://github.com/aws-samples/aws-incident-response-playbooks/blob/master/playbooks/IRP-CredCompromise.md">Incident Response: Compromised Credentials</a></li>
+    </ul>
+</div>
+</div>
 </div>
 
-<!-- Goatcounter stats -->
-<script data-goatcounter="https://csirt.goatcounter.com/count"
-            async src="//gc.zgo.at/count.js"></script>
-
-    
 </body>
 </html>

@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    background-color: black;
+    color: gray;
+}
+
+ol {
+    list-style-type: decimal;
+    list-style-position: inside
+}
+
+ul {
+    list-style-type: square;
+    list-style-position: inside
+}
