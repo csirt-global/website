@@ -74,6 +74,8 @@
 
                         <a href="#mission" class="font-medium text-yellow-700 hover:text-yellow-900">Mission</a>
 
+                        <a href="#news" class="font-medium text-yellow-700 hover:text-yellow-900">News</a>
+
                         <a href="#organisation" class="font-medium text-yellow-700 hover:text-yellow-900">Organisation</a>
 
                         <a href="#team" class="font-medium text-yellow-700 hover:text-yellow-900">Team</a>
@@ -120,6 +122,9 @@
                     <div class="px-2 pt-2 pb-3">
                         <a href="#mission"
                            class="block px-3 py-2 rounded-md text-base font-medium text-yellow-700 hover:text-yellow-500 hover:bg-gray-500">Mission</a>
+
+                        <a href="#news"
+                           class="block px-3 py-2 rounded-md text-base font-medium text-yellow-700 hover:text-yellow-500 hover:bg-gray-500">News</a>
 
                         <a href="#organisation"
                            class="block px-3 py-2 rounded-md text-base font-medium text-yellow-700 hover:text-yellow-500 hover:bg-gray-500">Organisation</a>
@@ -234,6 +239,36 @@
                 <p class="mt-2">To find out more, please see our <a class="text-yellow-500" href="https://theorg.com/org/csirt-global/jobs/response-team-lead-11212914">Opportunities</a> or <a class="text-yellow-500" href="mailto:inquiries@csirt.global?subject=CSIRT" onmouseenter="document.getElementById('soufianemail').href=document.getElementById('soufianemail').href.replace('nospam','@csirt.global')">contact the IR team</a>.</p>
             </details>
         </div>
+        
+        <!-- News-->
+
+        <div class="mt-6 prose prose-yellow prose-lg text-gray-300 mx-auto">
+            <h1 id="news"><span class="mt-2 block text-3xl text-center leading-8 font-bold tracking-tight text-yellow-500 sm:text-4xl sm:tracking-tight">News</span>
+        </h1>
+
+        <div id="substack-feed-embed"></div>
+                <script>
+                window.SubstackFeedWidget = {
+                    substackUrl: "csirt.substack.com",
+                    posts: 3,
+                    hidden: ["reactions", "comments", "premium", "author"],
+                    colors: {
+                    primary: "#F6E714",
+                    secondary: "##D1D5DB",
+                    background: "#1D1D1B",
+                    }
+                };
+                </script>
+                <script src="https://substackapi.com/embeds/feed.js" async></script>
+
+            </div>
+        </div>
+
+    
+
+        <!-- end of news-->
+        
+        
         <!-- Organisation-->
         <div class="mt-6 prose prose-yellow prose-lg text-gray-300 mx-auto">
             <h1 id="organisation"><span class="mt-2 block text-3xl text-center leading-8 font-bold tracking-tight text-yellow-500 sm:text-4xl sm:tracking-tight">Organisation</span>
