@@ -7,9 +7,9 @@ Contact: mailto:inquiries@csirt.global
 Preferred-Languages: en, nl
 
 # RFC 9116 requires this, and a file past its expiry must not be relied on.
-# scripts/check-security-txt.py fails the build 30 days before this date, so it
-# cannot quietly lapse the way the previous one did (issue #56).
+# Refresh this date before it passes so the file stays valid (see issue #56).
 Expires: 2027-08-26T00:00:00.000Z
+Canonical: https://csirt.global/.well-known/security.txt
 
 # Coordinated Vulnerability Disclosure policy: see 'CVD Statement' on the page below.
 Policy: https://app.zerocopter.com/en/cvd/8b2fbf09-539f-4b09-bee0-2ec875cb3321
