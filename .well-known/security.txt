@@ -1,11 +1,19 @@
-# Found a bug? Report it here:
+# CSIRT.global finds and reports vulnerabilities for a living. This is how you
+# report one in our own systems.
+
 Contact: https://app.zerocopter.com/en/cvd/8b2fbf09-539f-4b09-bee0-2ec875cb3321
+Contact: mailto:inquiries@csirt.global
 
-Preferred-Languages: en
-Expires: 2025-01-01T00:01:00.000Z
+Preferred-Languages: en, nl
 
-# Vulnerability Disclosure Policy - see 'CVD Statement' in the page below
+# RFC 9116 requires this, and a file past its expiry must not be relied on.
+# scripts/check-security-txt.py fails the build 30 days before this date, so it
+# cannot quietly lapse the way the previous one did (issue #56).
+Expires: 2027-08-26T00:00:00.000Z
+
+# Coordinated Vulnerability Disclosure policy: see 'CVD Statement' on the page below.
 Policy: https://app.zerocopter.com/en/cvd/8b2fbf09-539f-4b09-bee0-2ec875cb3321
 
-# CISRT.global is a non-profit organisation run by volunteers. If you want to help out as a volunteer, please feel free to reach out to us:
-Hiring: https://csirt.global/#help
+# CSIRT.global is a not-for-profit foundation run by volunteers. If you would
+# like to help out, start here:
+Hiring: https://csirt.global/get-involved/
